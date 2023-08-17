@@ -1,0 +1,115 @@
+.walkinUserDialog .rate-select{
+    .row {
+        // padding: 5px 64px;
+        // flex-flow: row;
+        .col {
+            display: flex;
+            height: 90px;
+            border: 1px solid slategray;
+            cursor: pointer;
+            display: flex;
+            flex-flow: column;
+            align-items: center; 
+        }
+    }
+    .row .col:nth-child(2) {
+    color: #e5b817;
+    svg {
+        fill: #e5b817;
+        height: 20px;
+        margin-top: 18px;
+    }
+    &:hover {
+        color: white;
+        svg {
+        fill: white;
+        }
+        background-color: #e5b817;
+    }
+    &.selected {
+        color: white;
+        svg {
+        fill: white;
+        }
+        background-color: #e5b817;
+    }
+    p {
+        text-align: center;
+        line-height: 1;
+        margin-top: 5px;
+    }
+    }
+    .row .col:nth-child(1) {
+        color: green;
+        svg {
+        fill: green;
+        height: 20px;
+        margin-top: 18px;
+        }
+        &:hover {
+        color: white;
+        svg {
+            fill: white;
+        }
+        background-color: green;
+        }
+
+        &.selected {
+        color: white;
+        svg {
+            fill: white;
+        }
+        background-color: green;
+        }
+        p {
+        text-align: center;
+        line-height: 1;
+        margin-top: 5px;
+        }
+    }
+    .row .col:nth-child(3) {
+        color: #98a2a7;
+        svg {
+        fill: #98a2a7;
+        height: 20px;
+        margin-top: 18px;
+        }
+        &:hover {
+        color: white;
+        svg {
+            fill: white;
+        }
+        background-color: #98a2a7;
+        }
+
+        &.selected {
+        color: white;
+        svg {
+            fill: white;
+        }
+        background-color: #98a2a7;
+        }
+        p {
+        text-align: center;
+        line-height: 1;
+        margin-top: 5px;
+        }
+    }
+}
+.bg-composed-wrapper--content{
+    .btn-grp-div{
+        .start-btn{
+            border: 7px white solid;
+            border-radius: 50% !important; 
+            height: 136px !important;
+            width: 137px !important;
+            font-size: 30px !important;
+        }
+    }
+}
+.bg-deep-sky{
+    background-color: #225a9f;
+}
+.app-content {
+    background-color: #090f75;
+}

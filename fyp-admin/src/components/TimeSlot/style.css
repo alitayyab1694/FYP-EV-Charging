@@ -1,0 +1,46 @@
+.custom-time-slot-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-slot-inputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.time-slot-inputs input {
+  padding: 5px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.time-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.time-slot {
+  padding: 5px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

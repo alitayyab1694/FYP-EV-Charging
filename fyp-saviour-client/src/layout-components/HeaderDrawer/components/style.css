@@ -1,0 +1,26 @@
+.custom-time-slot-select {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-slots {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-slot {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.time-slot.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.time-slot.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

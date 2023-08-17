@@ -1,0 +1,302 @@
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  fab,
+  faDiscord,
+  faDribbble,
+  faFacebook,
+  faGithub,
+  faGoogle,
+  faHtml5,
+  faInstagram,
+  faPinterest,
+  faReact,
+  faSlack,
+  faTwitter,
+  faVuejs,
+  faYoutube
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  faAddressCard,
+  faBell,
+  faBuilding,
+  faCalendarAlt,
+  faChartBar,
+  faCheckCircle,
+  faClock,
+  faCommentDots,
+  faComments,
+  faDotCircle,
+  faEnvelope,
+  faEye,
+  faFileAlt,
+  faFileArchive,
+  faFileAudio,
+  faFileCode,
+  faFileExcel,
+  faFileImage,
+  faFilePdf,
+  faFileVideo,
+  faFileWord,
+  faFolder,
+  faFolderOpen,
+  faGem,
+  faImages,
+  faKeyboard,
+  faLifeRing,
+  faLightbulb,
+  faMap,
+  faObjectGroup,
+  faQuestionCircle,
+  far,
+  faSquare,
+  faThumbsUp,
+  faTimesCircle,
+  faTrashAlt,
+  faUser,
+  faUserCircle
+} from '@fortawesome/free-regular-svg-icons';
+import {
+  faAlignCenter,
+  faAngleDoubleLeft,
+  faAngleDoubleRight,
+  faAngleDown,
+  faAngleLeft,
+  faAngleRight,
+  faAngleUp,
+  faArrowDown,
+  faArrowLeft,
+  faArrowRight,
+  faArrowsAltH,
+  faArrowUp,
+  faAward,
+  faBars,
+  faBatteryEmpty,
+  faBatteryFull,
+  faBirthdayCake,
+  faBomb,
+  faBusAlt,
+  faCameraRetro,
+  faCarBattery,
+  faCaretRight,
+  faCheck,
+  faChevronDown,
+  faChevronLeft,
+  faChevronRight,
+  faChevronUp,
+  faCog,
+  faCubes,
+  faDownload,
+  faEllipsisH,
+  faEllipsisV,
+  faExclamation,
+  faExternalLinkAlt,
+  faEyeDropper,
+  faFilm,
+  faHeart,
+  faInfoCircle,
+  faLemon,
+  faLink,
+  faMapMarkedAlt,
+  faNetworkWired,
+  faPager,
+  faPlayCircle,
+  faPlus,
+  faPlusCircle,
+  faPrint,
+  faQuoteRight,
+  faReply,
+  fas,
+  faSave,
+  faSearch,
+  faShapes,
+  faShareSquare,
+  faSignOutAlt,
+  faSitemap,
+  faSlidersH,
+  faSmile,
+  faStar,
+  faStarHalfAlt,
+  faSync,
+  faTable,
+  faTachometerAlt,
+  faTimes,
+  faUnlockAlt,
+  faUpload
+} from '@fortawesome/free-solid-svg-icons';
+import history from '@history';
+import 'assets/base.scss';
+import Auth from 'Auth';
+import store from 'config/configureStore';
+import React, { Component } from 'react';
+import Geocode from 'react-geocode';
+import { Provider } from 'react-redux';
+import { Router } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import Routes from 'Routes';
+import ScrollToTop from 'utils/ScrollToTop';
+
+library.add(
+  far,
+  faSquare,
+  faLifeRing,
+  faCheckCircle,
+  faTimesCircle,
+  faDotCircle,
+  faThumbsUp,
+  faComments,
+  faFolderOpen,
+  faTrashAlt,
+  faFileImage,
+  faFileArchive,
+  faCommentDots,
+  faFolder,
+  faKeyboard,
+  faCalendarAlt,
+  faEnvelope,
+  faAddressCard,
+  faMap,
+  faObjectGroup,
+  faImages,
+  faUser,
+  faLightbulb,
+  faGem,
+  faClock,
+  faUserCircle,
+  faQuestionCircle,
+  faBuilding,
+  faBell,
+  faFileExcel,
+  faFileAudio,
+  faFileVideo,
+  faFileWord,
+  faFilePdf,
+  faFileCode,
+  faFileAlt,
+  faEye,
+  faChartBar
+);
+library.add(
+  fab,
+  faFacebook,
+  faTwitter,
+  faVuejs,
+  faReact,
+  faHtml5,
+  faGoogle,
+  faInstagram,
+  faPinterest,
+  faYoutube,
+  faDiscord,
+  faSlack,
+  faDribbble,
+  faGithub
+);
+library.add(
+  fas,
+  faExclamation,
+  faAngleDoubleRight,
+  faAngleDoubleLeft,
+  faCheck,
+  faSmile,
+  faHeart,
+  faBatteryEmpty,
+  faBatteryFull,
+  faChevronRight,
+  faSitemap,
+  faPrint,
+  faMapMarkedAlt,
+  faTachometerAlt,
+  faAlignCenter,
+  faExternalLinkAlt,
+  faShareSquare,
+  faInfoCircle,
+  faSync,
+  faQuoteRight,
+  faStarHalfAlt,
+  faShapes,
+  faCarBattery,
+  faTable,
+  faCubes,
+  faPager,
+  faCameraRetro,
+  faBomb,
+  faNetworkWired,
+  faBusAlt,
+  faBirthdayCake,
+  faEyeDropper,
+  faUnlockAlt,
+  faDownload,
+  faAward,
+  faPlayCircle,
+  faReply,
+  faUpload,
+  faBars,
+  faEllipsisV,
+  faSave,
+  faSlidersH,
+  faCaretRight,
+  faChevronUp,
+  faPlus,
+  faLemon,
+  faChevronLeft,
+  faTimes,
+  faChevronDown,
+  faFilm,
+  faSearch,
+  faEllipsisH,
+  faCog,
+  faArrowsAltH,
+  faPlusCircle,
+  faAngleRight,
+  faAngleUp,
+  faAngleLeft,
+  faAngleDown,
+  faArrowUp,
+  faArrowDown,
+  faArrowRight,
+  faArrowLeft,
+  faStar,
+  faSignOutAlt,
+  faLink
+);
+class App extends Component {
+  componentDidMount() {
+    Geocode.setApiKey('AIzaSyCp1tQyw5qb8e0rCl3vjra4s9h3dvaKN0c');
+    Geocode.setLanguage('en');
+  }
+  render() {
+    return (
+      <Provider store={store}>
+        <Auth>
+          <Router history={history}>
+            <ScrollToTop>
+              <Routes />
+            </ScrollToTop>
+            <ToastContainer
+              enableMultiContainer
+              containerId={'A'}
+              position={toast.POSITION.BOTTOM_LEFT}
+            />
+            <ToastContainer
+              enableMultiContainer
+              containerId={'D'}
+              position={toast.POSITION.BOTTOM_RIGHT}
+            />
+            <ToastContainer
+              enableMultiContainer
+              containerId={'B'}
+              position={toast.POSITION.TOP_RIGHT}
+            />
+            <ToastContainer
+              enableMultiContainer
+              containerId={'C'}
+              position={toast.POSITION.BOTTOM_CENTER}
+            />
+          </Router>
+        </Auth>
+      </Provider>
+    );
+  }
+}
+
+export default App;
